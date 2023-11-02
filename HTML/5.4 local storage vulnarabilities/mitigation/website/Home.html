@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>FilmyGossip</title>
+</head>
+
+<body id="page">
+    <h1 id="heading"> Welcome to FilmyGossip </h1>
+    <div id="search">
+        <input type="text" placeholder="Search for a movie" name="movie">
+        <button type="submit">
+            <i class="fa fa-search"> </i>
+        </button>
+    </div>
+    <br>
+    <div id="container">
+        <h2 id="title">
+            <u>About FilmyGossip</u>
+        </h2>
+        <br>
+        <p>
+            FilmyGossip provides you the trendy updates and reviews of latest Movies. You can register with us to get the feed in your
+            mail.
+            <br>
+            <button>Register</button>
+        </p>
+    </div>
+    <hr>
+    <footer>
+        <p>FilmyGossip
+            <span> &copy; 2019</span>
+        </p>
+        <p>
+            <u>Contact Us:</u>
+        </p>
+        <p>Mail Id: filmyupdates@gossip.com</p>
+        <p id="footer">** Disclaimer: This demo is only for Educational purpose. Please do not try this attack on any commercial website
+            **
+    </footer>
+    <script>
+        $.get('http://localhost:4000/send', function (data) {
+            $("#page").css('background-color', data.bgcolor);
+            $("#page").css('color', data.color);
+            $("#page").css('font-size', data.fontsize+"px");
+        });
+    </script>
+</body>
+
+</html>
