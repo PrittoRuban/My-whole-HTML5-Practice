@@ -1,0 +1,31 @@
+
+iframe {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+label {
+    margin-left: 27%;
+    color: darkblue;
+    background-color: chartreuse;
+    font-size: 30px;
+}
+
+button {
+    margin-left: 45%;
+    font-size: 20px;
+    color: red;
+}
+div{
+    margin-top:178px
+}

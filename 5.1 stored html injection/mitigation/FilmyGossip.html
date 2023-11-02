@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./encoder.js"></script>
+    <title>FilmyGossip</title>
+    <script>
+        $.get('data.json', function (data) {
+            $("#list").text('');
+            var content = '';
+            for (var i = 0; i < data.length; i++) {
+                let movie = Encoder.htmlEncode(data[i].name);
+                content += '<li>' + movie + '</li>';
+            }
+            $("#list").append(content);
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="heading"> Welcome to FilmyGossip </h1>
+    <br>
+    <div id="container">
+        <h2 id="title">
+            <u>Latest Movies</u>
+        </h2>
+        <br>
+        <ul id="list"></ul>
+    </div>
+    <hr>
+    <footer>
+        <p>FilmyGossip
+            <span> &copy; 2019</span>
+        </p>
+        <p>
+            <u>Contact Us:</u>
+        </p>
+        <p>Mail Id: filmyupdates@gossip.com</p>
+        <p id="footer">** Disclaimer: This demo is only for Educational purpose. Please do not try this attack on any commercial website
+            **
+    </footer>
+</body>
+
+</html>
